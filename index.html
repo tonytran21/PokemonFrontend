@@ -4,6 +4,7 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" media="screen" href="index.css">
+    <link href="https://db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon+Solid" rel="stylesheet">
 </head>
 <body>
     <main>
@@ -33,16 +34,36 @@
             <div class="center-content">
                 <h1 class="your-pokemon-title">Your Collected Pokemon:</h1>
                 <div class="image-container">
-                    <div class="image-box">
-                        <img src="image1.jpg" alt="Image 1">
+                    <div class="image-box" onmouseover="showPopup('popup1')" onmouseout="hidePopup('popup1')">
+                        <img src="../images/007.png" alt="Image 1">
+                        <div class="popup" id="popup1">
+                           <h3>Name: Squirtle</h3>
+                            <p>Height: 1'08</p>
+                            <p>Type: Water</p>
+                            <p>Weight: 19.8</p>
+                            <p>Abilities: Torrent</p>
+                        </div>
                     </div>
-                    <div class="image-box">
-                        <img src="image2.jpg" alt="Image 2">
+                    <div class="image-box" onmouseover="showPopup('popup2')" onmouseout="hidePopup('popup2')">
+                        <img src="../images/001.png" alt="Image 2">
+                        <div class="popup" id="popup2">
+                            <h3>Name: Bulbasaur</h3>
+                            <p>Height: 3'03</p>
+                            <p>Type: Grass/Poison</p>
+                            <p>Weight: 28.7</p>
+                            <p>Abilities: Overgrow</p>
+                        </div>
                     </div>
-                    <div class="image-box">
-                        <img src="image3.jpg" alt="Image 3">
+                    <div class="image-box" onmouseover="showPopup('popup3')" onmouseout="hidePopup('popup3')">
+                        <img src="../images/004.png" alt="Image 3">
+                        <div class="popup" id="popup3">
+                            <h3>Name: Charmander</h3>
+                            <p>Height: 2'00</p>
+                            <p>Type: Fire</p>
+                            <p>Weight: 18.7</p>
+                            <p>Abilities: Blaze</p>
+                        </div>
                     </div>
-                    <!-- Add more image boxes as needed -->
                 </div>
             </div>
 
@@ -52,5 +73,6 @@
             </div>
         </div>
     </main>
+<script src="../javascript/index.js"></script>
 </body>
 </html>
