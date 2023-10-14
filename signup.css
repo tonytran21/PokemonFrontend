@@ -9,6 +9,27 @@ html, body{
     width:100%;
     height:100%;
     background-color: #ffffc3;
+
+}
+
+.background-image {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+#pikachu-image {
+    background-image: url('images/025.png');
+    background-position: left;
+    background-size:400px;
+}
+
+#pokeball-image {
+    background-image: url('images/Pokemon-1536x1536.png');
+    background-position: right;
+    background-size: 300px;
 }
 
 body {
@@ -26,10 +47,20 @@ body {
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    z-index:1;
 }
 
 h2 {
     color: #333;
+    font-family: 'Pokemon Solid', cursive;
+    letter-spacing: 3px;
+
+}
+
+label{
+    color:#333;
+    font-family: 'Pokemon Solid', cursive;
+    letter-spacing: 4px;
 }
 
 form {
@@ -59,7 +90,7 @@ input[type="password"] {
 }
 
 button {
-    background-color: #00a9da;
+    background-color: #ffb33e;
     color: #fff;
     border: none;
     padding: 10px 20px;
