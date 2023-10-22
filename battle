@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Battle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        h1 {
+            color: #e84d59;
+        }
+        .pokemon-selector {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .pokemon-selector img {
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        .pokemon-selector img:hover {
+            border: 2px solid #e84d59;
+        }
+        button {
+            background-color: #e84d59;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #c63f49;
+        }
+        .dice-result {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pokemon Battle</h1>
+    <div class="pokemon-selector">
+        <img src="file:///C:/wamp64/www/pokemon/PokemonFrontend-master/images/bulbasour.png" alt="001" onclick="selectPokemon('bulbasour')">
+        <img src="file:///C:/wamp64/www/pokemon/PokemonFrontend-master/images/charmander.png" alt="004" onclick="selectPokemon('charmander')">
+        <img src="file:///C:/wamp64/www/pokemon/PokemonFrontend-master/images/squirtle.png" alt="007" onclick="selectPokemon('squirtle')">
+        <img src="file:///C:/wamp64/www/pokemon/PokemonFrontend-master/images/pikachu.png" alt="025" onclick="selectPokemon('pikachu')">
+       
+    </div>
+    <button onclick="startBattle()">Start Battle</button>
+    <div id="battle-result" class="dice-result"></div>
+
+    <script>
+        let selectedPokemon = '';
+
+        function selectPokemon(pokemonName) {
+            selectedPokemon = pokemonName;
+            const pokemonImages = document.querySelectorAll('.pokemon-selector img');
+            pokemonImages.forEach(image => {
+                image.style.border = '2px solid transparent';
+            });
+            const selectedImage = document.querySelector(`img[alt="${pokemonName}"]`);
+            selectedImage.style.border = '2px solid #e84d59';
+        }
+
+        function startBattle() {
+            if (selectedPokemon === '') {
+                alert('Please select a Pokemon first.');
+                return;
+            }
+
+          
+            const diceResult = Math.floor(Math.random() * 6) + 1;
+
+            const damageDealt = diceResult * 10;
+
+        
+            const battleResultElement = document.getElementById("battle-result");
+            battleResultElement.textContent = `You rolled a ${diceResult}! ${selectedPokemon} dealt ${damageDealt} damage.`;
+
+        }
+    </script>
+</body>
+</html>
