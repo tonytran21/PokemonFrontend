@@ -5,6 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="signup.css">
   <link href="https://db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon+Solid" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif; 
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333; 
+    }
+    input {
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049; 
+    }
+    .confirm-password, .confirm-age, .accept-terms {
+      color: blue; 
+    }
+    .login-link {
+      margin-top: 10px;
+      color: #333; 
+      text-decoration: none;
+      display: block;
+    }
+    .login-link:hover {
+      text-decoration: underline; 
+    }
+  </style>
   <title>Sign Up</title>
 </head>
 <body>
@@ -12,8 +55,8 @@
     <h2>Sign Up</h2>
     <form>
       <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+        <label for="username">Username (3-25 characters):</label>
+        <input type="text" id="username" name="username" pattern=".{3,25}" title="Username must be between 3 and 25 characters" required>
       </div>
       <div class="form-group">
         <label for="email">Email:</label>
@@ -23,8 +66,25 @@
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
       </div>
+      <div class="form-group">
+        <label for="confirm-password" class="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirm-age" class="confirm-age">
+          <input type="checkbox" id="confirm-age" name="confirm-age" required>
+          Confirm that I am over 13 years old
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="accept-terms" class="accept-terms">
+          <input type="checkbox" id="accept-terms" name="accept-terms" required>
+          Accept Terms and Conditions of Pokemon College
+        </label>
+      </div>
       <button type="submit">Sign Up</button>
     </form>
+    <a href="#" class="login-link">Have an account? Log in</a>
   </div>
 </body>
 </html>
