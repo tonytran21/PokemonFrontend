@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Pokemon Solid', sans-serif;
+  background-color: 
+}
+
+.background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#pikachu-image {
+  background-image: url('path/to/pikachu-image.jpg'); 
+  opacity: 0.5; 
+}
+
+#pokeball-image {
+  background-image: url('path/to/pokeball-image.jpg');
+  opacity: 0.5;
+}
+
+.signup-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+h2 {
+  color: blue; 
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  color: #333; 
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 20px 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: blue; 
+  color: #fff; 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0066cc; 
+}
+
+p {
+  margin-top: 20px;
+  color: #333; 
+}
+
+a {
+  color: red; 
+}
